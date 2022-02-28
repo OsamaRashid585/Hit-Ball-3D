@@ -25,4 +25,11 @@ public class FollowPlayer : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("end"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
